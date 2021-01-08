@@ -1,0 +1,66 @@
+{
+  "uid" : "ddd23a821b99a5f6",
+  "name" : "test_a",
+  "fullName" : "test_calc#test_a",
+  "historyId" : "22cd20635ad46f6e8a05835f869f242a",
+  "time" : {
+    "start" : 1609831033409,
+    "stop" : 1609831033409,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "c869c7f4348a4163",
+      "name" : "stdout",
+      "source" : "c869c7f4348a4163.txt",
+      "type" : "text/plain",
+      "size" : 11
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_calc"
+  }, {
+    "name" : "host",
+    "value" : "jjiliu"
+  }, {
+    "name" : "thread",
+    "value" : "43592-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_calc"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ddd23a821b99a5f6.json",
+  "parameterValues" : [ ]
+}

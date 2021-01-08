@@ -1,0 +1,27 @@
+add:
+  datas:
+    - [1, 1, 2]
+    - [100, 100, 200]
+    - [0.3, 0.1, 0.2]
+    - [-1, -1, -2]
+    - [1, 0, 1]
+    - [23, 12, 35]
+  ids:
+    - 'int_case'
+    - 'bignum_case'
+    - 'float case'
+    - 'case 4'
+    - 'case 5'
+    - 'case 6'
+
+div:
+  datas:
+    - [10, 2, 5]
+    - [30, 40, 0.75]
+    - [0.3, 2, 0.15]
+    - [-1, -2, 0.5]
+  ids:
+    - 'divide case 1'
+    - 'divide case 2'
+    - 'divide case 3'
+    - 'divide case 4'

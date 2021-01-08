@@ -1,0 +1,4 @@
+login hhh
+print case 3
+tom
+logout hhhh

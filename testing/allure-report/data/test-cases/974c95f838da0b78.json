@@ -1,0 +1,62 @@
+{
+  "uid" : "974c95f838da0b78",
+  "name" : "test_simple_assume[用例2]",
+  "fullName" : "test_fixture#test_simple_assume",
+  "historyId" : "605d3d3489e7f008ddc2f7731100d373",
+  "time" : {
+    "start" : 1609831032903,
+    "stop" : 1609831032902,
+    "duration" : -1
+  },
+  "status" : "failed",
+  "statusMessage" : "pytest_assume.plugin.FailedAssumption: \n2 Failed Assumptions:\n\ntest_fixture.py:45: AssumptionFailure\n>>\tpytest.assume(x == y)\nAssertionError: assert False\n\ntest_fixture.py:47: AssumptionFailure\n>>\tpytest.assume(False)\nAssertionError: assert False",
+  "statusTrace" : "tp = <class 'pytest_assume.plugin.FailedAssumption'>, value = None, tb = None\n\n    def reraise(tp, value, tb=None):\n        try:\n            if value is None:\n                value = tp()\n            if value.__traceback__ is not tb:\n>               raise value.with_traceback(tb)\nE               pytest_assume.plugin.FailedAssumption: \nE               2 Failed Assumptions:\nE               \nE               test_fixture.py:45: AssumptionFailure\nE               >>\tpytest.assume(x == y)\nE               AssertionError: assert False\nE               \nE               test_fixture.py:47: AssumptionFailure\nE               >>\tpytest.assume(False)\nE               AssertionError: assert False\n\n..\\venv\\lib\\site-packages\\six.py:702: FailedAssumption",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_fixture"
+  }, {
+    "name" : "host",
+    "value" : "jjiliu"
+  }, {
+    "name" : "thread",
+    "value" : "43592-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_fixture"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "x",
+    "value" : "1"
+  }, {
+    "name" : "y",
+    "value" : "0"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "974c95f838da0b78.json",
+  "parameterValues" : [ "1", "0" ]
+}

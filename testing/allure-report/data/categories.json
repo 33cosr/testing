@@ -1,0 +1,90 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "pytest_assume.plugin.FailedAssumption: \n2 Failed Assumptions:\n\ntest_fixture.py:45: AssumptionFailure\n>>\tpytest.assume(x == y)\nAssertionError: assert False\n\ntest_fixture.py:47: AssumptionFailure\n>>\tpytest.assume(False)\nAssertionError: assert False",
+      "children" : [ {
+        "name" : "test_simple_assume[用例三]",
+        "uid" : "a51056237a8171eb",
+        "parentUid" : "255e54d445e92c49e03564531c5c7610",
+        "status" : "failed",
+        "time" : {
+          "start" : 1609831032707,
+          "stop" : 1609831032705,
+          "duration" : -2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "0", "1" ]
+      }, {
+        "name" : "test_simple_assume[用例2]",
+        "uid" : "974c95f838da0b78",
+        "parentUid" : "255e54d445e92c49e03564531c5c7610",
+        "status" : "failed",
+        "time" : {
+          "start" : 1609831032903,
+          "stop" : 1609831032902,
+          "duration" : -1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "1", "0" ]
+      } ],
+      "uid" : "255e54d445e92c49e03564531c5c7610"
+    }, {
+      "name" : "pytest_assume.plugin.FailedAssumption: \n1 Failed Assumptions:\n\ntest_fixture.py:47: AssumptionFailure\n>>\tpytest.assume(False)\nAssertionError: assert False",
+      "children" : [ {
+        "name" : "test_simple_assume[用例1]",
+        "uid" : "76ea87aec854bf3d",
+        "parentUid" : "7056809a56e1d95beb1326bd6b87276d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1609831032970,
+          "stop" : 1609831032969,
+          "duration" : -1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "1", "1" ]
+      } ],
+      "uid" : "7056809a56e1d95beb1326bd6b87276d"
+    }, {
+      "name" : "AssertionError: assert 4 == 5\n +  where 4 = inc(3)",
+      "children" : [ {
+        "name" : "test_answer",
+        "uid" : "759ac3eaea7c8871",
+        "parentUid" : "1771e873c640f03d453fc668387161d5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1609831033070,
+          "stop" : 1609831033071,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1771e873c640f03d453fc668387161d5"
+    }, {
+      "name" : "AssertionError: assert 0.4 == 0.2",
+      "children" : [ {
+        "name" : "test_add[float case]",
+        "uid" : "39580bb1e0ea8274",
+        "parentUid" : "6db2ff7c37028186b1c64d99ca09f4c8",
+        "status" : "failed",
+        "time" : {
+          "start" : 1609831033365,
+          "stop" : 1609831033365,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "0.3", "0.1", "0.2" ]
+      } ],
+      "uid" : "6db2ff7c37028186b1c64d99ca09f4c8"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}
