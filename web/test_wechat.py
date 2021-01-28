@@ -3,34 +3,64 @@ from time import sleep
 
 from selenium import webdriver
 
-# "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
-
-# 复用已有浏览器 只有chrome可以
-# 1. 退出浏览器
-# 2. 找到chrome的启动路径
-# 3 配置环境变量
-# 4 启动 命令 windows： chrome --remote-debugging-port=9222
-#  mac: Google \ Chrome --remote-debugging-port=9222
-# 5 访问 http://localhost:9222/
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
 
-class TestTestdemo():
+# 复用浏览器
+
+# chrome --remote-debugging-port=9222
+class TestWechat():
 
     def setup_method(self):
         options = Options()
         options.debugger_address = "127.0.0.1:9222"
-        self.driver.implicitly_wait(5)
+
         self.driver = webdriver.Chrome()
+        self.driver.implicitly_wait(5)
 
     def teardown_method(self):
         self.driver.quit()
 
-    def test_testdemo(self):
-        # self.driver.get("https://work.weixin.qq.com/wework_admin/frame")
+    def test_case1(self):
+        self.driver.get("https://work.weixin.qq.com/wework_admin/frame")
         # sleep(3)
-        self.driver.find_element_by_id("menu_contacts").click()
+        # self.driver.find_element_by_id("menu_contacts").click()
         sleep(3)
+
+    def test_shelve(self):
+        # 1 获取cookie
+        db = shelve.open("cookies")
+        cookies = db['cookie']
+        db.close()
+        # print(cookies)
+
+        # 2 打开
+        self.driver.get("https://work.weixin.qq.com/wework_admin/frame")
+
+        # 3 填入cookie
+        for cookie in cookies:
+            self.driver.add_cookie(cookie)
+        # self.driver.get("https://work.weixin.qq.com/wework_admin/frame")
+
+        # 4 打开
+        self.driver.refresh()
+        sleep(3)
+
+        # 5 找到元素 点击
+        self.driver.find_element(By.CSS_SELECTOR, '.index_service_cnt_itemWrap:nth-child(2)').click()
+        sleep(2)
+        # self.driver.find_element_by_id("js_upload_file_input").send_keys()
+
+        # 6 发送文件 绝对路径
+        self.driver.find_element_by_css_selector(".import_settingStage_upload_inputWrap input").send_keys(
+            "C:\Jenny\\test world hello.xlsx")
+
+        # 7 获取上传文件名
+        filename = self.driver.find_element_by_id("upload_file_name").text
+        print(filename)
+        assert "test world hello.xlsx" == filename
+        sleep(10)
 
     def test_cookie(self):
         # cookies = self.driver.get_cookies() # 当前打开页面的cookie
@@ -84,15 +114,10 @@ class TestTestdemo():
             {'domain': '.qq.com', 'expiry': 2147483647, 'httpOnly': False, 'name': 'ptcz', 'path': '/', 'secure': False,
              'value': '3c5ead7ad89440de8c558ee76f6ea72b6f138fa4498d25b9995145e8cfb84fb3'}]
         self.driver.get("https://work.weixin.qq.com/wework_admin/frame")
-        # shelve 内置模块 对数据进行持久化存储的库 相当于小型数据库
 
-        db = shelve.open("cookies")
-        db['cookie'] = cookies
-        db.close()
         for cookie in cookies:
+            if 'expiry' in cookie.keys():
+                cookie.pop('expiry')
             self.driver.add_cookie(cookie)
         # self.driver.get("https://work.weixin.qq.com/wework_admin/frame")
         self.driver.refresh()
-
-
-
